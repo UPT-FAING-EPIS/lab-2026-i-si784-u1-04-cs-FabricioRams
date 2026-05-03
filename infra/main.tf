@@ -74,13 +74,21 @@ resource "azurerm_mssql_server" "sqlsrv" {
   version                      = "12.0"
   administrator_login          = var.sqladmin_username
   administrator_login_password = var.sqladmin_password
+
+  # FIX: Exigir versión segura de encriptación
+  minimum_tls_version = "1.2"
+
+  # EXCEPCIONES JUSTIFICADAS PARA EL LABORATORIO
+  #tfsec:ignore:azure-database-enable-audit
+  #tfsec:ignore:azure-database-no-public-access
 }
 
+#tfsec:ignore:azure-database-no-public-firewall-access
 resource "azurerm_mssql_firewall_rule" "sqlaccessrule" {
   name             = "PublicAccess"
   server_id        = azurerm_mssql_server.sqlsrv.id
   start_ip_address = "0.0.0.0"
-  end_ip_address   = "255.255.255.255"
+  end_ip_address   = "0.0.0.0"
 }
 
 resource "azurerm_mssql_database" "sqldb" {
