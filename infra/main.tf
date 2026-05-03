@@ -30,8 +30,8 @@ provider "azurerm" {
 
 # Generate a random integer to create a globally unique name
 resource "random_integer" "ri" {
-  min = 100
-  max = 999
+  min = 10000
+  max = 99999
 }
 
 # Create the resource group
