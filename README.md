@@ -628,6 +628,20 @@ az group export -n upt-arg-XXX > lab_04.json
 ## ACTIVIDADES ENCARGADAS
 
 1. Subir el diagrama al repositorio como lab_04.png y el reporte de metricas lab_04.html.
+  Diagrama:
+<img width="1375" height="458" alt="image" src="https://github.com/user-attachments/assets/acde591b-06b8-4108-af59-6108937ece7a" />
+
 2. Resolver utilizando código en terraform las vulnerabilidades detectadas por TFSec
+  Código utilizado en terraform para resolver las vulnerabilidades:
+<img width="649" height="527" alt="image" src="https://github.com/user-attachments/assets/b8b972bb-a5d7-4e7e-a8e7-5dc4e9e19fca" />
+
 3. Realizar el escaneo de vulnerabilidad con SonarCloud dentro del Github Action correspondiente.
+   Escaneo hecho con SonarCloud:
+   <img width="1413" height="790" alt="image" src="https://github.com/user-attachments/assets/b912c825-b4b3-4766-916b-f91ec4d04b92" />
+
 4. Resolver las vulnerabilidades detectadas por SonarCloud
+   5 vulnerabilidades resueltas detectadas por SonarCloud
+   <img width="1406" height="812" alt="image" src="https://github.com/user-attachments/assets/8d312e4a-e0ea-43c6-ac49-87f74323f1c8" />
+   Variable para contraseña debido a vulnerabilidad SonarCloud:
+   <img width="674" height="254" alt="image" src="https://github.com/user-attachments/assets/d1c5c848-bc70-486c-a0af-9f0d1cf1fddb" />
+
