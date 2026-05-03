@@ -1,5 +1,5 @@
 # Utilizar la imagen base de .NET SDK
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 
 # Establecer el directorio de trabajo
 WORKDIR /app
@@ -10,7 +10,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o out
 
 # Utilizar la imagen base de .NET Runtime
-FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-alpine AS runtime
 LABEL org.opencontainers.image.source="https://github.com/fabriciorams/Shorten02"
 
 # Establecer el directorio de trabajo
